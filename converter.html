@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+    <link rel="preconnect" href="https://fonts.google.com/specimen/Hind">
+    <script>
+        function cal()
+        {
+            var r=document.getElementById("rupee").value;
+            var d=document.getElementById("dollar").value;
+            var p=document.getElementById("pound").value;
+            var e=document.getElementById("euro").value;
+            var y=document.getElementById("yen").value;
+            var patt = /^([0-9]+[\.]?[0-9]*)$/g;
+
+            //----------for rupee conversion----------------
+            if(document.getElementById("rupee").value != "" && patt.test(r))
+            {
+                document.getElementById("dollar").value= (r*0.013).toFixed(4);
+                document.getElementById("pound").value = (r*0.0097).toFixed(4);
+                document.getElementById("euro").value =  (r*0.011).toFixed(4);
+                document.getElementById("yen").value =   (r*1.47).toFixed(4);
+            }
+            //------------for dollar conversion------------------- 
+            else if(document.getElementById("dollar").value != "" && patt.test(d))
+            {
+                document.getElementById("rupee").value=  (d/0.013 ).toFixed(4);
+                document.getElementById("pound").value = (d*0.72).toFixed(4);
+                document.getElementById("euro").value =  (d*0.83  ).toFixed(4);
+                document.getElementById("yen").value =   (d*108.87).toFixed(4);
+            }
+            //------------for pound conversion------------------- 
+            else if(document.getElementById("pound").value != "" && patt.test(p))
+            {
+                document.getElementById("rupee").value=   (p/0.0097) .toFixed(4);
+                document.getElementById("dollar").value = (p/0.72  ).toFixed(4);
+                document.getElementById("euro").value =   (p*1.15  ).toFixed(4);
+                document.getElementById("yen").value =    (p*151.87).toFixed(4);
+            }
+            //------------for euro conversion------------------- 
+            else if(document.getElementById("euro").value != "" && patt.test(e))
+            {
+                document.getElementById("rupee").value=   (e/0.011 ).toFixed(4);
+                document.getElementById("dollar").value = (e/0.83  ).toFixed(4);
+                document.getElementById("pound").value =  (e/1.15  ).toFixed(4);
+                document.getElementById("yen").value =    (e*131.96).toFixed(4);
+            }
+            //------------for yen conversion------------------- 
+            else if(document.getElementById("yen").value != "" && patt.test(y))
+            {
+                document.getElementById("rupee").value= (y/1.47).toFixed(4);
+                document.getElementById("dollar").value = (y/108.87).toFixed(4);
+                document.getElementById("pound").value =  (y/151.87).toFixed(4);
+                document.getElementById("euro").value = (y/131.96).toFixed(4);
+            }
+            else{
+                alert("Enter the no. in correct format.");
+            }
+        }
+        function reset(){
+            document.getElementById("rupee").value = "";
+            document.getElementById("dollar").value = "";
+            document.getElementById("pound").value = " ";
+            document.getElementById("euro").value = "";
+            document.getElementById("yen").value = "";
+        }
+    </script>
+    <style>
+        input[type = button]{
+            border-radius: 100px;
+            width: 100px;
+            background-color: red;
+            height: 30px;
+            
+        }
+        input[type = text]{
+            border-radius: 100px;
+            color:white;
+            font-size: 25px;
+
+            border-style:  dotted solid double dashed;
+            border-color: white;
+            width: 200px;
+            background-color: transparent;
+            height: 30px;
+        }
+       
+    </style>
+</head>
+<body background="bs.jpg" style="background-repeat:no-repeat;background-size:100%">
+
+    <center>
+        <h1 style="color: white;">Currency Converter</h1>
+    <table  cellspacing ="15px" cellpadding = "10px" >
+        <tr>
+            <td >
+                <img src="india.png" alt="india" width="120px" height="70px">
+            </td>
+            <td style="color:white; font-size: 25px;" >
+                &#8377; <input type="text" id="rupee" onchange="cal()" >
+            </td>
+            </tr>
+
+           
+            <tr>
+                <td>
+                    <img src="us.png" alt="us" width="120px" height="70px"> 
+                </td>
+                <td style="color:white; font-size: 25px" >
+                    &#x24; <input type="text" id="dollar" onchange ="cal()">
+                </td>
+            </tr>
+            
+            <tr>
+            <td>
+                <img src="uk.png" alt="uk" width="120px" height="70px"> 
+            </td>
+            <td style="color:white; font-size: 25px" >
+                &#163; <input type="text" id="pound" onchange="cal()">
+            </td>
+            </tr>
+            <tr>
+            <td>
+                <img src="spain.png" alt="spain" width="120px" height="70px"> 
+            </td>r
+            <td style="color:white; font-size: 25px" >
+                &#128; <input type="text" id="euro" onchange="cal()">
+            </td>
+            </tr>
+            <tr>
+            <td >
+                <img src="japan.jpg" alt="japan" width="120px" height="70px">  
+            </td>
+            <td style="color:white; font-size: 25px" >
+                &#165; <input type="text" id="yen" onchange="cal()">
+            </td>
+        </tr>
+    </table>
+    <br>
+    <input type="reset" style="width: 375px; height: 35px; color:white; background:transparent ; border-color: white;
+            border-style:  dotted solid double dashed; " onclick="reset()">
+    <br>
+    </center>
+</body>
+</html>
