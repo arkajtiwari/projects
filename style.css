@@ -1,0 +1,105 @@
+body{
+ /* background-image: url("heroimage.jpg");*/
+  background: url(heroimage.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+}
+
+.main{
+  height: 630px;
+  width: 800px;
+  background-color: rgba();
+  border-radius: 200px;
+  left: 280px;
+  background: rgba(255, 255, 255, 0.0);
+  /*box-shadow: 0px 0px 80px 30px white;*/
+  position: absolute;
+
+}
+h1{
+  font-family: 'Rubik', sans-serif;
+  font-size: 4rem;
+  position: relative;
+  left: 280px;
+
+}
+.lab_first{
+  font-size: 20px;
+  font-family: 'Orelega One', cursive;
+  position: relative;
+  left: 50px;
+}
+#First{
+  height: 30px;
+  width: 190px;
+  position: relative;
+  left: 50px;
+}
+#email{
+  height: 30px;
+  position: relative;
+  left: 100px;
+  width: 300px;
+}
+#Last{
+  height: 30px;
+  position: relative;
+  left: 120px;
+  width: 240px;
+}
+.lab_last{
+  font-size: 20px;
+  position: relative;
+  left: 120px;
+  font-family: 'Orelega One', cursive;
+}
+#lab_email{
+  font-size: 20px;
+  font-family: 'Orelega One', cursive;
+  position: relative;
+  left: 50px;
+
+}
+.lab_mob{
+  font-family: 'Orelega One', cursive;
+  position: relative;
+  left: 50px;
+
+}
+#mob{
+  height: 30px;
+  font-size: 20px;
+  position: relative;
+  left: 50px;
+  width: 340px;
+}
+.add{
+  font-family: 'Orelega One', cursive;
+  position: relative;
+  left: 50px;
+  font-size: 20px;
+}
+#add{
+  height: 30px;
+  font-size: 20px;
+  position: relative;
+  left: 50px;
+  width: 340px;
+}
+#btn{
+  width: 150px;
+  height: 40px;
+  border-radius: 30px;
+  border: 0px;
+  font-family: 'Orelega One', cursive;
+  font-size: 20px;
+  background-color: #7eca9c;
+  position: relative;
+  left: 330px;
+}
+.error{
+  border: 1px solid red;
+}
