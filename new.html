@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Customer Registration </title>
+		<link rel="Stylesheet" href="styleb.css">
+
+</head>
+<body>
+
+	<div class="login-page">
+	<div class="form">
+	
+	
+	
+	</form>
+
+<div class="container">
+    <form action="">
+            <h1><font color="RED"> </font> </h1>
+            <img src="kkd.png" width="25%" align="left">
+        <h1 class="main_heading"><font color="white" size="10"> Customer Registration - Kitaab Ki Duniya </font> </h1>
+        <hr width="500">
+        <br><br><br><br><br><br><br><br>
+       <font color="white">
+        <h2>Contact Information</h2>
+        <p>Name:* <input type="text" name+"name" required placeholder="my name " required="text"></p>
+        <p>
+            Email:* <input type="email" name="email" required id="email" placeholder="cws@xyz.com" required="email">
+            </p>
+    <fieldset>
+        <legend >Gender*</legend>
+         <p>
+
+            
+            Male <input type="radio" required name="gender" id="male" required="gender" > Female <input type="radio" name="gender" id="female" required="gender">
+        </p>
+    </fieldset>
+        <p>
+        Address:* <textarea name="address" placeholder="Enter Your Address" required id="address" cols="123" rows="8" required="address"></textarea>
+        </p>
+       
+        <p>
+        PinCode:* <input type="number" required maxlength="6" name="pincode" id="pincode" placeholder="aabbcc" required="pincode">
+        <hr color="white">
+        </p>
+        <h3>Payment Information</h3>
+        <p>Card type:* 
+            <select name="card type" id="card type" required="card" >
+                <option value="">---Select a card type---</option>
+                <option value="visa">Visa</option>
+                <option value="rupay">Rupay</option>
+                <option value="mastercard">Mastercard</option>
+            </select>
+        </p>
+        <p> 
+            Card Number:* <input type="number" required name="card_number" id="card_number" placeholder="aaaa-bbbb-cccc-dddd">
+        </p>
+        <p>
+            Expiry Date:* <input type="date" required name="exp_date" id="exp_date" placeholder="ddmmyyyy">
+        </p>
+        <p>
+            CVV:* <input type="password" required maxlength="3" name="cvv" id="cvv" placeholder="pqr">
+        </p>
+        <hr>
+        <p>Identity Proof:*
+            <select name="Identity Proof" id="card type" required>
+                <option value="">---Select a valid proof---</option>
+                <option value="Aadhar">Aadhar Card</option>
+                <option value="Pan">Pan Card</option>
+                <option value="Voter id">Voter Id card</option>
+                <option value="License">Driving License</option>
+            </select>
+        <input type="file">
+        </p>
+        <button>Create Account</button></form>
+        <br><br><br>
+
+	
+	<p class="message">Already Registered? <a href="signin.html">Login</a>
+	
+</p></font>
+ </DIV></a></p>
+</form>
+
+</div>
+
+</div>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js">
+	$('.message a').click(function(){
+	$('form').animate({height:"toggle",opacity:"toggle"},"slow");
+});
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
